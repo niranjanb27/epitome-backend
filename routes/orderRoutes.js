@@ -12,7 +12,7 @@ router.post("/", auth, async (req, res) => {
     const { items } = req.body;
 
     const subTotal = items.reduce((sum, i) => sum + i.quantity * i.rate, 0);
-    const gstAmount = (subTotal * 12) / 100;
+    const gstAmount = (subTotal * 5) / 100;
     const grandTotal = subTotal + gstAmount;
 
     const order = await Order.create({
