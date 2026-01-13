@@ -7,7 +7,7 @@ const medicineSchema = new mongoose.Schema(
     rate: { type: Number, required: true },
     price: { type: Number, required: true },
     scheme: String,
-    inputs: Number,
+    inputs: String,
   },
   { timestamps: true }
 );
